@@ -1,6 +1,8 @@
 # Fitness Tracker
 ## Website designed to record different types of exercises performed in daily workouts 
 
+![image](https://user-images.githubusercontent.com/36345799/126553162-796fd48b-387b-406a-bea2-4b9af7af7410.png)
+
 ## Table of Contents 
 [license](#license)
 
