@@ -3,7 +3,11 @@ const db = require("../../models");
 
 router.get("/", async (req, res) => {
     try{
-        const workoutData = await db.Workout.find({});
+        const workoutData = await db.Workout.aggregate([{
+            $addFields: {
+            totalDuration: {$sum: '$exercises.duration'},
+            totalDistance: {$sum: '$exercises.distance'}},
+        }]);
         res.status(200).json(workoutData);
     } catch (err) {
         res.status(500).json(err);
