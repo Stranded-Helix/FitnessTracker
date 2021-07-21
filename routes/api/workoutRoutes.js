@@ -29,7 +29,6 @@ router.put('/:id', async (req , res) => {
 
 router.post("/", async (req, res) => {
     try {
-        //TODO: fix post to match model
         const newWorkout = await db.Workout.create(req.body);
         res.json(newWorkout);
     } catch (err) {
